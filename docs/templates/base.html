@@ -41,6 +41,21 @@
   </nav>
 
   <main class="container">
+    {% block header %}
+    {# Default header for pages and sections #}
+    {% if page or section %}
+    {% set obj = page | default(value=section) %}
+    {% if not obj.extra.hide_header %}
+    <div class="page-header">
+      <h1>{{ obj.title }}</h1>
+      {% if obj.description %}
+      <p>{{ obj.description }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% endif %}
+    {% endblock header %}
+
     {% block content %} {% endblock content %}
   </main>
 
