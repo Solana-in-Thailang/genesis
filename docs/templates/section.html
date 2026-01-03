@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block title %}{{ section.title }} | {{ config.title
+}}{% endblock title %} {% block content %}
+<h1>{{ section.title }}</h1>
+
+{{ section.content | safe }}
+
+<hr />
+
+<div class="grid">
+    {% for page in section.pages %}
+    <div class="glass-card">
+        <h3>{{ page.title }}</h3>
+        <p>{{ page.description | default(value="Explore this quest and earn rewards.") }}</p>
+        <a href="{{ page.permalink }}" class="btn btn-outline">View Details</a>
+    </div>
+    {% endfor %}
+
+    {% for subsection_path in section.subsections %}
+    {% set subsection = get_section(path=subsection_path) %}
+    <div class="glass-card">
+        <h3>{{ subsection.title }}</h3>
+        <p>Explore this category.</p>
+        <a href="{{ subsection.permalink }}" class="btn btn-outline">Explore</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

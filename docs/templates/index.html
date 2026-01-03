@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <h1>We build the system,<br>the system builds us.</h1>
+    <p>Welcome to the <strong>Programmable DAO</strong> of Thai Developers. Stake SOL, write code, and earn your
+        reputation on-chain.</p>
+
+    <div class="cta-group">
+        <a href="{{ get_url(path='quests') }}" class="btn btn-primary">Start Building</a>
+        <a href="{{ get_url(path='rules') }}" class="btn btn-outline">Read Rules</a>
+    </div>
+</section>
+
+<section>
+    <div class="grid">
+        <div class="glass-card">
+            <h3>📜 Rules of Engagement</h3>
+            <p>Proof of Work is the only way up. Learn how we verify commitment through code.</p>
+            <a href="{{ get_url(path='rules') }}" class="btn btn-outline">View Rules</a>
+        </div>
+        <div class="glass-card">
+            <h3>⚔️ Quest Board</h3>
+            <p>Choose your path and earn rewards.</p>
+            <a href="{{ get_url(path='quests') }}" class="btn btn-outline">Browse Quests</a>
+        </div>
+        <div class="glass-card">
+            <h3>🏆 Leaderboard</h3>
+            <p>See who tops the charts. Verify on-chain reputation and verified commits.</p>
+            <a href="{{ get_url(path='leaderboard') }}" class="btn btn-outline">Check Ranks</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

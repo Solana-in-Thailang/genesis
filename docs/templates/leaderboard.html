@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>🏆 Hall of Fame</h1>
+
+{% set roster = load_data(path="../../data/registry.json") %}
+
+<table>
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>GitHub</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in roster %}
+        <tr>
+            <td>
+                {% if user.role == "Owner" %}<span class="badge-crab">Owner</span>
+                {% elif user.role == "King Crab" %}<span class="badge-crab">King Crab</span>
+                {% else %}<span class="badge-sword">{{ user.role }}</span>
+                {% endif %}
+            </td>
+            <td>{{ user.name }}</td>
+            <td>
+                <a href="https://github.com/{{ user.github }}" target="_blank">
+                    @{{ user.github }}
+                </a>
+            </td>
+            <td>{{ user.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{{ page.content | safe }}
+
+{% endblock content %}
