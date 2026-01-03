@@ -1,7 +1,7 @@
-{% extends "base.html" %} {% block title %}{{ page.title }} | {{ config.title
-}}{% endblock title %} {% block content %}
-<div class="terminal-block">
+{% extends "base.html" %}
+
+{% block content %}
+<article class="{% if page.extra.layout == 'terminal' %}terminal-block{% else %}glass-card content-card{% endif %}">
     {{ page.content | safe }}
-</div>
 </article>
 {% endblock content %}
