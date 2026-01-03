@@ -39,7 +39,7 @@
 * **Proof:** Completed Issues = Reputation
 
 ## ⚓️ Getting Started
-1.  **Join Discord:** [https://discord.gg/WZK29DB79R](https://discord.gg/WZK29DB79R)
+1.  **Join Discord:** [https://discord.gg/PGbUgNmsns](https://discord.gg/PGbUgNmsns)
 2.  **Read the Quests:** Explore `docs/content/quests` for current challenges.
 3.  **Check Treasury:** Financial transparency is documented in `docs/content/treasury`.
 
@@ -62,7 +62,7 @@ To run the site locally, you need to have [Zola](https://www.getzola.org/documen
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/solana-in-thailang/genesis.git
+    git clone https://github.com/solana-thailand/genesis.git
     cd genesis/docs
     ```
 2.  **Run the development server:**
