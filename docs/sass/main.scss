@@ -42,6 +42,132 @@ body {
         radial-gradient(circle at 90% 10%, rgba(20, 241, 149, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 50% 50%, rgba(153, 69, 255, 0.05) 0%, transparent 60%);
     background-attachment: fixed;
+    position: relative;
+}
+
+/* Background Aurora Streaks (Localized) */
+.aurora-section {
+    position: relative;
+    height: 300px;
+    /* Specific height for the pre-footer section */
+    width: 100%;
+    overflow: hidden;
+    margin-top: 4rem;
+}
+
+.aurora-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.aurora-streak {
+    position: absolute;
+    height: 1px;
+    /* Slightly thinner for more elegance */
+    background: linear-gradient(90deg,
+            transparent 0%,
+            #fff 30%,
+            var(--streak-color, var(--solana-green)) 50%,
+            #fff 70%,
+            transparent 100%);
+    opacity: 0;
+    filter: blur(1px);
+    /* Slightly more blur for artistic feel */
+    width: var(--streak-width, 300px);
+    animation: streak-move var(--streak-duration, 5s) ease-in-out infinite;
+    animation-delay: var(--streak-delay, 0s);
+}
+
+/* Add intense but soft glow */
+.aurora-streak::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 100%;
+    height: 13px;
+    background: inherit;
+    filter: blur(15px);
+    opacity: 0.9;
+}
+
+@keyframes streak-move {
+    0% {
+        transform: translateX(-120%) scaleX(1);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: var(--streak-opacity, 0.8);
+        transform: translateX(-50%) scaleX(1.1);
+    }
+
+    80% {
+        opacity: var(--streak-opacity, 0.8);
+        transform: translateX(50vw) scaleX(1.1);
+    }
+
+    100% {
+        transform: translateX(100vw) scaleX(1);
+        opacity: 0;
+    }
+}
+
+/* Discord CTA */
+.discord-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glow);
+    border-radius: var(--radius);
+    padding: 3rem;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 40px rgba(153, 69, 255, 0.2);
+
+    h2 {
+        margin-top: 0;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, #fff, var(--solana-purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p {
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .btn-discord {
+        background: #5865F2;
+        color: white;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        border-radius: 100px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        &:hover {
+            background: #4752c4;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+        }
+    }
 }
 
 /* Typography */
@@ -64,8 +190,8 @@ h1 {
     font-size: 3.5rem;
     line-height: 1.1;
     background: linear-gradient(135deg, #fff 0%, #aaa 100%);
-    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
