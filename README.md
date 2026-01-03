@@ -38,10 +38,39 @@
 * สร้าง Issue ในหมวด `Budget & Event Proposal` เพื่อขออนุมัติ
 * **Proof:** Completed Issues = Reputation
 
-## 🚀 Getting Started
+## ⚓️ Getting Started
 1.  **Join Discord:** [https://discord.gg/WZK29DB79R](https://discord.gg/WZK29DB79R)
-2.  **Read the Quests:** ไปที่โฟลเดอร์ `/quests` เพื่อดูภารกิจปัจจุบัน
-3.  **Check Treasury:** ดูความโปร่งใสของกองกลางได้ที่ `/treasury`
+2.  **Read the Quests:** Explore `docs/content/quests` for current challenges.
+3.  **Check Treasury:** Financial transparency is documented in `docs/content/treasury`.
+
+## 🏗 Project Architecture
+
+This project is built using [Zola](https://www.getzola.org/), a fast static site generator.
+
+### Directory Structure
+- `data/`: Contains core data files (e.g., `registry.json` for member lists).
+- `docs/`: The main Zola project directory.
+    - `content/`: Markdown files for site content (Rules, Leaderboard, Quests).
+    - `sass/`: Global styles using SCSS.
+    - `templates/`: HTML templates and layouts.
+    - `static/`: Static assets like images and icons.
+- `.github/`: GitHub workflows and issue templates for DAO operations.
+
+## 🚀 Local Development
+
+To run the site locally, you need to have [Zola](https://www.getzola.org/documentation/getting-started/installation/) installed.
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/solana-in-thailang/genesis.git
+    cd genesis/docs
+    ```
+2.  **Run the development server:**
+    ```bash
+    zola serve
+    ```
+3.  **View the site:** Open `http://127.0.0.1:1111` in your browser.
+
 
 ---
 *Maintained by Solana Developer Thailand Core Team*
