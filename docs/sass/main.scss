@@ -1,0 +1,417 @@
+/* Solana Aurora Theme - main.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&family=Sarabun:wght@300;400;600&display=swap');
+
+:root {
+    /* Core Palette */
+    --bg-dark: #000000;
+    --bg-surface: #0a0a0a;
+
+    --solana-purple: #9945FF;
+    --solana-green: #14F195;
+    --solana-blue: #19FB9B;
+    --crab-red: #FF4D4D;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #94A3B8;
+    --text-dim: #64748B;
+
+    --border-light: rgba(255, 255, 255, 0.08);
+    --border-glow: rgba(153, 69, 255, 0.3);
+
+    /* Fonts */
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', 'Sarabun', sans-serif;
+
+    /* UX */
+    --container-width: 1200px;
+    --radius: 16px;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+
+    /* Aurora Gradient Background */
+    background-image:
+        radial-gradient(circle at 10% 0%, rgba(153, 69, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 10%, rgba(20, 241, 149, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(153, 69, 255, 0.05) 0%, transparent 60%);
+    background-attachment: fixed;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-sans);
+    /* Cleaner headers like references */
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+nav {
+    padding: 1.5rem 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .brand {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-right: auto;
+        letter-spacing: -0.01em;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(90deg, var(--solana-purple), var(--solana-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            .logo {
+                width: 32px;
+                height: 32px;
+                object-fit: contain;
+                -webkit-text-fill-color: initial;
+                /* Reset text gradient for image */
+            }
+        }
+    }
+
+    a {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+
+        &:hover {
+            color: var(--text-primary);
+        }
+    }
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0 4rem;
+    text-align: left;
+
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin-bottom: 2.5rem;
+        font-weight: 300;
+    }
+
+    .cta-group {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+/* Glass Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: var(--border-glow);
+        transform: translateY(-2px);
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 1.25rem;
+        color: var(--text-primary);
+    }
+
+    p {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Actions/Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    /* Pill shape */
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &.btn-primary {
+        background: linear-gradient(135deg, var(--solana-purple), #7e3aff);
+        color: #fff;
+
+        &:hover {
+            box-shadow: 0 0 20px rgba(153, 69, 255, 0.4);
+        }
+    }
+
+    &.btn-outline {
+        background: transparent;
+        border-color: var(--border-light);
+        color: var(--text-primary);
+
+        &:hover {
+            border-color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.05);
+        }
+    }
+}
+
+/* Terminal Block (Refined) */
+.terminal-block {
+    background: #050505;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    position: relative;
+
+    /* Mac-style fancy header dots */
+    &::before {
+        content: "• • •";
+        display: block;
+        font-size: 1.5rem;
+        line-height: 0.5;
+        color: #333;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+    }
+
+    pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    code {
+        color: var(--solana-green);
+        background: transparent;
+    }
+
+    p,
+    li {
+        color: var(--text-secondary);
+        font-family: var(--font-mono);
+    }
+
+    strong {
+        color: var(--solana-purple);
+    }
+}
+
+/* Leaderboard */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+
+    th {
+        text-align: left;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-light);
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+
+    td {
+        padding: 1rem;
+        border-bottom: 1px solid var(--border-light);
+        color: var(--text-primary);
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    tr:hover td {
+        background: rgba(255, 255, 255, 0.02);
+    }
+}
+
+.badge-crab {
+    color: var(--crab-red);
+    font-weight: 600;
+}
+
+.badge-sword {
+    color: var(--solana-green);
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 6rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-dim);
+    font-size: 0.875rem;
+
+    a {
+        color: var(--text-secondary);
+        margin: 0 0.5rem;
+
+        &:hover {
+            color: var(--text-primary);
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        padding: 1rem 0;
+
+        .nav-content {
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        ul {
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .brand {
+            margin-right: 0;
+            font-size: 1.25rem;
+        }
+
+        a {
+            font-size: 0.875rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+    }
+
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .hero {
+        padding: 4rem 0 3rem;
+        text-align: center;
+
+        h1 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-group {
+            justify-content: center;
+        }
+    }
+}
