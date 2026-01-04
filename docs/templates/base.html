@@ -5,6 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{{ config.description }}">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ config.base_url }}">
+  <meta property="og:title" content="{{ config.title }}">
+  <meta property="og:description" content="{{ config.description }}">
+  <meta property="og:image" content="{{ get_url(path='logo.png') }}">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ config.base_url }}">
+  <meta property="twitter:title" content="{{ config.title }}">
+  <meta property="twitter:description" content="{{ config.description }}">
+  <meta property="twitter:image" content="{{ get_url(path='logo.png') }}">
 
   <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
   <link rel="icon" href="{{ get_url(path='favicon.ico') }}" type="image/png">
@@ -22,12 +37,17 @@
         </li>
       </ul>
       <ul class="nav-links">
-        <li><a href="{{ get_url(path='rules') }}">Rules</a></li>
-        <li><a href="{{ get_url(path='roadmap') }}">Roadmap</a></li>
-        <li><a href="{{ get_url(path='quests') }}">Quests</a></li>
-        <li><a href="{{ get_url(path='treasury') }}">Treasury</a></li>
-        <li><a href="{{ get_url(path='leaderboard') }}">Leaderboard</a></li>
-        <li><a href="https://discord.gg/PGbUgNmsns" target="_blank">
+        <li><a href="{{ get_url(path='rules') }}" {% if current_path=='rules/' %}class="active" {% endif %}>Rules</a>
+        </li>
+        <li><a href="{{ get_url(path='roadmap') }}" {% if current_path=='roadmap/' %}class="active" {% endif
+            %}>Roadmap</a></li>
+        <li><a href="{{ get_url(path='quests') }}" {% if current_path=='quests/' %}class="active" {% endif %}>Quests</a>
+        </li>
+        <li><a href="{{ get_url(path='treasury') }}" {% if current_path=='treasury/' %}class="active" {% endif
+            %}>Treasury</a></li>
+        <li><a href="{{ get_url(path='leaderboard') }}" {% if current_path=='leaderboard/' %}class="active" {% endif
+            %}>Leaderboard</a></li>
+        <li><a href="https://discord.gg/PGbUgNmsns" target="_blank" class="discord-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
               viewBox="0 0 33.867 33.867">
               <path

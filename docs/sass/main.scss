@@ -278,9 +278,24 @@ nav {
     a {
         font-size: 0.95rem;
         color: var(--text-secondary);
+        position: relative;
+        padding: 0.5rem 0;
 
-        &:hover {
+        &:hover,
+        &.active {
             color: var(--text-primary);
+        }
+
+        &.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--solana-purple), var(--solana-green));
+            border-radius: 2px;
+            box-shadow: 0 0 10px var(--border-glow);
         }
     }
 }
@@ -369,6 +384,11 @@ nav {
             border-color: var(--text-primary);
             background: rgba(255, 255, 255, 0.05);
         }
+    }
+
+    &:active {
+        transform: scale(0.96);
+        filter: brightness(0.9);
     }
 }
 
