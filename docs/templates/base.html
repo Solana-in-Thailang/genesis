@@ -37,15 +37,15 @@
         </li>
       </ul>
       <ul class="nav-links">
-        <li><a href="{{ get_url(path='rules') }}" {% if current_path=='rules/' %}class="active" {% endif %}>Rules</a>
+        <li><a href="{{ get_url(path='rules') }}" {% if current_path=='/rules/' %}class="active" {% endif %}>Rules</a>
         </li>
-        <li><a href="{{ get_url(path='roadmap') }}" {% if current_path=='roadmap/' %}class="active" {% endif
+        <li><a href="{{ get_url(path='roadmap') }}" {% if current_path=='/roadmap/' %}class="active" {% endif
             %}>Roadmap</a></li>
-        <li><a href="{{ get_url(path='quests') }}" {% if current_path=='quests/' %}class="active" {% endif %}>Quests</a>
-        </li>
-        <li><a href="{{ get_url(path='treasury') }}" {% if current_path=='treasury/' %}class="active" {% endif
+        <li><a href="{{ get_url(path='quests') }}" {% if current_path=='/quests/' %}class="active" {% endif
+            %}>Quests</a></li>
+        <li><a href="{{ get_url(path='treasury') }}" {% if current_path=='/treasury/' %}class="active" {% endif
             %}>Treasury</a></li>
-        <li><a href="{{ get_url(path='leaderboard') }}" {% if current_path=='leaderboard/' %}class="active" {% endif
+        <li><a href="{{ get_url(path='leaderboard') }}" {% if current_path=='/leaderboard/' %}class="active" {% endif
             %}>Leaderboard</a></li>
         <li><a href="https://discord.gg/PGbUgNmsns" target="_blank" class="discord-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"

@@ -362,9 +362,19 @@ nav {
     /* Pill shape */
     font-weight: 500;
     font-size: 0.95rem;
-    transition: all 0.2s ease;
+    transition: all 0.2s ease, transform 0.1s ease;
     cursor: pointer;
     border: 1px solid transparent;
+
+    &:hover {
+        transform: translateY(-1px) scale(1.02);
+    }
+
+    &:active {
+        transform: scale(0.95);
+        filter: brightness(0.9);
+        transition: transform 0.05s;
+    }
 
     &.btn-primary {
         background: linear-gradient(135deg, var(--solana-purple), #7e3aff);
@@ -386,10 +396,6 @@ nav {
         }
     }
 
-    &:active {
-        transform: scale(0.96);
-        filter: brightness(0.9);
-    }
 }
 
 /* Terminal Block (Refined) */
