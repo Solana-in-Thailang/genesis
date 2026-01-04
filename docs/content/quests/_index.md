@@ -9,7 +9,7 @@ layout = "cards"
 The board lists all available missions. Choose your path wisely.
 
 * **Quest 0:** Setup & Stake (Coming Soon)
- * * Goal: เริ่มต้นการเป็นส่วนหนึ่งของ Genesis ด้วยการตั้งค่าสภาพแวดล้อมการพัฒนาและวางมัดจำ (Commitment Stake) เพื่อยืนยันความตั้งใจ
+ * * Goal: Start your Genesis journey by setting up your development environment and placing a Commitment Stake to confirm your intent.
 
 * **Quest 1:** Hello Solana (Coming Soon)
- * * Goal: เขียน Script แรกเพื่อเชื่อมต่อและดึงข้อมูลจากเครือข่าย Solana (Devnet) เพื่อพิสูจน์ความเข้าใจพื้นฐาน
+ * * Goal: Write your first script to connect to and fetch data from the Solana network (Devnet) to prove your basic understanding.

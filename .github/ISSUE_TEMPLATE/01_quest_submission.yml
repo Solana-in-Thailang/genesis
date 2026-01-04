@@ -1,13 +1,13 @@
 name: ⚔️ Quest Submission (Unstake Request)
-description: ส่งงานเพื่อผ่านด่านและขอรับเงิน Stake คืน
-title: "[QUEST] ส่งงาน: <ชื่อ Quest> โดย @<GithubUsername>"
+description: Submit your work to complete the mission and request your stake back.
+title: "[QUEST] Submission: <Quest Name> by @<GithubUsername>"
 labels: ["quest-submission", "needs-review"]
 body:
   - type: input
     id: discord_id
     attributes:
       label: Discord Username
-      description: Discord Username เพื่อปรับ Rank
+      description: Discord Username for Rank adjustment.
       placeholder: example#1234
     validations:
       required: true
@@ -16,7 +16,7 @@ body:
     id: tx_hash
     attributes:
       label: Staking Transaction Hash
-      description: หลักฐานการโอนเงิน Stake (Tx Hash)
+      description: Proof of Stake payment (Tx Hash).
       placeholder: 5P3GiW...
     validations:
       required: true
@@ -25,7 +25,7 @@ body:
     id: public_key
     attributes:
       label: Your Public Key (Wallet Address)
-      description: ที่อยู่ Wallet ที่คุณใช้ Stake และต้องการรับเงินคืน
+      description: The wallet address you used to stake and where you want to receive your refund.
       placeholder: 4zMM9G...
     validations:
       required: true
@@ -34,7 +34,8 @@ body:
     id: repo_link
     attributes:
       label: Repository / PR Link
-      description: ลิงก์ของงานที่ทำเสร็จแล้ว
+      description: Link to your completed work.
+|
     validations:
       required: true
 
@@ -42,6 +43,6 @@ body:
     id: learnings
     attributes:
       label: What did you learn?
-      description: สรุปสั้นๆ ว่าได้เรียนรู้อะไรจาก Quest นี้
+      description: Briefly summarize what you learned from this Quest.
     validations:
       required: true

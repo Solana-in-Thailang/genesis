@@ -12,16 +12,16 @@ layout = "terminal"
 | Role | Address | Description |
 | :--- | :--- | :--- |
 | **Main Vault** | `TBD` | Genesis core assets and commitment stakes. |
-| **Operations Fund** | `TBD` | งบประมาณสำหรับจัดกิจกรรมและค่าใช้จ่าย Server |
+| **Operations Fund** | `TBD` | Budget for events and server expenses. |
 
 ## Live Status
-ตรวจสอบธุรกรรมทั้งหมดได้ผ่าน Explorer:
+Verify all transactions via the Explorer:
 * [View on Solana Explorer](https://explorer.solana.com)
 * [View on Squads](https://squads.so)
 
 ## Flow of Funds
-1.  **Incoming:** เงิน Stake จากสมาชิกใหม่ -> เข้า Main Vault
-2.  **Outgoing (Unstake):** สมาชิกส่ง Quest ผ่าน -> โอนคืนจาก Main Vault
-3.  **Forfeit:** สมาชิกทำผิดกฎ/หายตัว -> เงินถูกย้ายไป Operations Fund
+1.  **Incoming:** Stake from new members -> Main Vault.
+2.  **Outgoing (Unstake):** Member completes Quest -> Transferred back from Main Vault.
+3.  **Forfeit:** Member breaks rules or disappears -> Funds moved to Operations Fund.
 
 > "In Code We Trust. In Chain We Verify."

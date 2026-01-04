@@ -1,13 +1,13 @@
 name: 💰 Event / Budget Proposal
-description: เสนอจัดกิจกรรมหรือเบิกงบประมาณ (สำหรับ Core Team)
-title: "[OPS] <ชื่องาน/กิจกรรม>"
+description: Propose an event or request budget (for Core Team).
+title: "[OPS] <Event Name/Activity>"
 labels: ["operations", "budget-request"]
 body:
   - type: textarea
     id: objective
     attributes:
       label: Objective
-      description: จัดงานนี้เพื่ออะไร? คาดหวังอะไร?
+      description: Why organize this? What is the expected outcome?
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
     id: budget_breakdown
     attributes:
       label: Budget Breakdown (Cost Estimation)
-      description: แจกแจงค่าใช้จ่ายให้ละเอียด (บาท/USD)
+      description: Itemize all expenses in detail (THB/USD).
       value: |
         - Speaker Fee (P'Katopz): $250
         - Speaker Fee (P'Tae): $250

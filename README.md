@@ -2,40 +2,40 @@
 
 > **"We build the system, the system builds the builders."**
 
-ยินดีต้อนรับสู่ **Solana Thailand Genesis** — พื้นที่ของนักพัฒนาที่เน้นการลงมือทำจริง (Shippable Builders) เราคือ **Community-Led Organization** ที่ขับเคลื่อนด้วยความโปร่งใสผ่าน GitHub ทุกการตัดสินใจตรวจสอบได้ (**Provable Governance**) โดยเน้นระบบ **Meritocracy** (ระบอบความสามารถนิยม) ที่ให้ความสำคัญกับผลงาน (Proof of Work) มากกว่าการถือครอง Token
+Welcome to **Solana Thailand Genesis** — a workspace for Shippable Builders. We are a **Community-Led Organization** driven by transparency through GitHub; every decision is auditable (**Provable Governance**). We operate on a **Meritocracy** system that prioritizes Proof of Work over token holding.
 
 ## ⚓️ The System: Proof of Work over Tokenomics
-เพื่อรักษาคุณภาพและคัดกรองเฉพาะผู้ที่ตั้งใจจริง เราใช้ระบบ **Commitment Stake**:
+To maintain quality and ensure only serious participants join, we use a **Commitment Stake** system:
 
-1.  **Commitment Stake (วางมัดจำ):** ที่นี่คุณวางเงินเพื่อ "ซื้อสิทธิ์ในการพิสูจน์ฝีมือ" ผู้เข้าร่วมต้องโอน SOL เข้ากองกลางเพื่อยืนยันความตั้งใจในการเข้าร่วม Quest
-2.  **Build (ลงมือทำ):** ทำโจทย์ (Quest) หรือโปรเจกต์ให้สำเร็จตามเงื่อนไขที่กำหนด
-3.  **Unstake (รับเงินคืน):** เมื่อส่งงาน (PR/Issue) และผ่านการตรวจ (Merge) ระบบจะคืนเงินมัดจำให้ทันที
-4.  **Forfeit (ริบเงิน):** หากทิ้งงานหรือหายตัวไป เงินมัดจำจะถูกริบเข้า **Treasury** เพื่อใช้พัฒนา Community ต่อไป
+1.  **Commitment Stake:** Here, you stake SOL to "buy the right to prove your skills." Participants must transfer SOL to the vault to confirm their intent to join a Quest.
+2.  **Build:** Complete the mission (Quest) or project according to the specified conditions.
+3.  **Unstake:** Once the work (PR/Issue) is submitted and merged, the stake is returned immediately.
+4.  **Forfeit:** If you abandon the task or disappear, the stake will be forfeited to the **Treasury** to support further community development.
 
 ## 🎖 Ranks & Reputation (Governance)
-สิทธิ์ในการตัดสินใจและทิศทางของระบบจะขึ้นอยู่กับ **Reputation** ที่สะสมจากการมีส่วนร่วม (Contribution):
+Decision-making rights and system direction are based on **Reputation** accumulated through contributions:
 
 ### 🛡️ Core Maintainers (The Guardians)
 * **👑 Owner:** System Architect & Strategic Lead ([@katopz](https://github.com/katopz))
-* **✨ Holy Crab:** Mentors, Approvers & Judges (ผู้มีสิทธิ์ตัดสินผลงานและทิศทางระบบตาม Reputation)
+* **✨ Holy Crab:** Mentors, Approvers & Judges (Authority based on Reputation)
 * **🦀 King Crab:** Community Operator & Project Manager ([@ozoneRatchapon](https://github.com/ozoneRatchapon))
 
 ### ⚔️ Community Ranks (The Path)
-* **🐺 Lone Wolf:** Developer ระดับสูงที่เน้นฉายเดี่ยว (Special Contributor)
-* **🏹 Job Hunter (Rank 3):** ผู้ที่พิสูจน์ฝีมือแล้ว พร้อมรับงาน (Bounties) จากกองกลาง
-* **🔨 Builder (Rank 2):** ผู้ที่ทำ Quest สำเร็จ (Unstaked) เขียนโค้ดได้จริง
-* **🛡️ Challenger (Rank 1):** ผู้ที่วางเงิน Stake แล้ว และกำลังอยู่ในระหว่างการฝึกฝน
-* **👀 Spectator (Rank 0):** ผู้สังเกตการณ์ทั่วไปใน Discord
+* **🐺 Lone Wolf:** High-level Developer focused on solo contributions (Special Contributor)
+* **🏹 Job Hunter (Rank 3):** Proven builders ready for mid-level tasks/bounties.
+* **🔨 Builder (Rank 2):** Those who completed Quests (Unstaked) and demonstrated actual coding skills.
+* **🛡️ Challenger (Rank 1):** Those who have placed a Stake and are currently in training.
+* **👀 Spectator (Rank 0):** General observers in Discord.
 
 ## 🛠 How to Contribute
 
 ### 💻 For Developers (Code)
-* ส่ง Pull Request (PR) เพื่อแก้ Quest, อัปเดต Docs หรือสร้าง Tools
+* Submit Pull Requests (PRs) to solve Quests, update Docs, or build Tools.
 * **Proof:** Merged PRs = Reputation
 
 ### 🎨 For Operations (No-Code)
-* ช่วยจัด Event, ทำ Content, ติดต่อสถานที่
-* สร้าง Issue ในหมวด `Budget & Event Proposal` เพื่อขออนุมัติ
+* Help organize events, create content, or coordinate venues.
+* Create Issues under the `Budget & Event Proposal` category for approval.
 * **Proof:** Completed Issues = Reputation
 
 ## ⚓️ Getting Started
