@@ -41,7 +41,7 @@ body:
     validations:
       required: true
 
-    -type: input
+  - type: input
     id: receiver_address
     attributes:
       label: Receiver Address

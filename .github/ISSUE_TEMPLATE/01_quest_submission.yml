@@ -35,7 +35,6 @@ body:
     attributes:
       label: Repository / PR Link
       description: Link to your completed work.
-|
     validations:
       required: true
 
